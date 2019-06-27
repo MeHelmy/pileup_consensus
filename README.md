@@ -6,11 +6,9 @@ usage: pileup_consensus.py [-h] [-v] [-n BASE] [-r READS] [input] [output]
 Produce consensus fatsa from samtools pileup output
 
 positional arguments:
-  input                 pileup file (default: <_io.TextIOWrapper
-                        name='<stdin>' mode='r' encoding='UTF-8'>)
+  input                 pileup file
   output                Output file if no file result will be directed to
-                        stander output (default: <_io.TextIOWrapper
-                        name='<stdout>' mode='w' encoding='UTF-8'>)
+                        stander output 
 
 optional arguments:
   -h, --help            show this help message and exit
