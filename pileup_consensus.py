@@ -67,8 +67,11 @@ def allel_count(args):
                 elif base in 'ACGTNacgtn':
                     cov[base] += 1
                 elif base == '+' or base == '-':
-                    pos += int(re.search('[0-9]+', bases[pos:]).group())
-                    cov['D'] += 1
+                    indel = re.search('[0-9]+[AGCTNagctn]+', bases[pos:]).group()
+                    # move by position to next location
+                    pos += len(indel)
+                    # adding how many deletion ot insertion we have
+                    cov['D'] += int(re.search('[0-9]+', bases[pos:]).group())
                 elif base == '*':
                     cov['D'] += 1
 
