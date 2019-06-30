@@ -27,6 +27,12 @@ def get_args():
 
 
     parser.set_defaults(func=allel_count)
+
+    # if not argument print help.
+    if len(sys.argv) == 1 or not sys.stdin.isatty():
+        parser.print_help(sys.stderr)
+        sys.exit(1)
+
     args = parser.parse_args()
     if 'func' in args:
         args.func(args)
