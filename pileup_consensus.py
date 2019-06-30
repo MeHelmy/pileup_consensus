@@ -29,7 +29,7 @@ def get_args():
     parser.set_defaults(func=allel_count)
 
     # if not argument print help.
-    if len(sys.argv) == 1 or not sys.stdin.isatty():
+    if len(sys.argv) == 1 and sys.stdin.isatty():
         parser.print_help(sys.stderr)
         sys.exit(1)
 
