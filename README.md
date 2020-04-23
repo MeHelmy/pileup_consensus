@@ -1,5 +1,6 @@
 # pileup consensus
-Script that takes samtools pileup output and write consensus fasta file as output.
+~~~
+Script takes samtools pileup output and write consensus fasta file as output.
 
 usage: pileup_consensus.py [-h] [-v] [-n BASE] [-r READS] [input] [output]
 
@@ -19,3 +20,4 @@ optional arguments:
                         variant. (default: 2)
 
 pileup_consensus.py version 0.01. use command -h for info.
+~~~
